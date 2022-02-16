@@ -57,7 +57,7 @@ if __name__ == "__main__":
         obj.initiate_download(args.file_link)
     if args.spreadsheet is not None:
         obj.read_checkout_xl(args.spreadsheet)
-    if args.test is not None:
+    if args.test == 'True':
         logging.info('Testing Method: get_file_id')
         ret_id = obj.get_file_id('https://drive.google.com/file/d/1ELFoAY5e423yt0PgzzBVlspEDy7TUhke/view?usp=sharing')
         assert ret_id == '1ELFoAY5e423yt0PgzzBVlspEDy7TUhke', 'Function is returning wrong Key please check'
